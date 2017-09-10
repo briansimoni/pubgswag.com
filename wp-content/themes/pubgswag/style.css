@@ -61,7 +61,7 @@ html, body {
     position: absolute;
     height: 105%;
     width: 105%;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(http://cdn.mos.cms.futurecdn.net/uYr6LFF8seHvcamkXBoeSP.jpg) no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/wp-content/themes/pubgswag/images/background-pubg.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
