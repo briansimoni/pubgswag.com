@@ -9,6 +9,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Amazon Affiliate, Store, Gaming
 */
 
+pre {
+    background-color: white !important;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Teko:400,500,700');
 html, body {
     height: 100%;
@@ -89,4 +93,13 @@ html, body {
 
 .item-container p {
     flex-grow: 1;
+}
+
+.item-container button {
+    padding-right: 30px;
+}
+
+.category-heading {
+    text-align: center;
+    color: orange;
 }

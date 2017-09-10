@@ -10,13 +10,16 @@
 <div class="wrapper">
 
     <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <a class="navbar-brand" href="/">
             <img src="<?php echo get_template_directory_uri() . '/images/brand.png'?>">
         </a>
 	    <?php wp_nav_menu( array( 'menu' => 'Header Menu',
                                   'container' => 'div',
                                   'container_class' => 'collapse navbar-collapse',
-                                  'container_id' => '',
+                                  'container_id' => 'navbarTogglerDemo02',
                                   'menu_class' => 'navbar-nav ml-auto',
                                   'menu_id' => '',
 	                              'echo' => true,
