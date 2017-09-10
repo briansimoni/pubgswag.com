@@ -1,0 +1,92 @@
+/*
+Theme Name: PUBG Swag
+Author: Brian Simoni
+Author URI: https://briansimoni.com
+Description: PUBG Swag theme is a super dope swagged out theme used to promote swag from Player Unknown's Battlegrounds
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Amazon Affiliate, Store, Gaming
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Teko:400,500,700');
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #263238;
+    color: white;
+}
+.wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+.footer,
+.push {
+    height: 50px;
+    background-color: #292b2c;
+}
+
+.jumbotron {
+    font-family: 'Teko', sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+#swag {
+    font-weight: 700;
+}
+
+.jumbotron .container {
+    z-index: 1;
+}
+
+.jumbotron-container {
+    overflow: hidden;
+    position:relative;
+    z-index: 1;
+    color: #e08012;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.jumbotron-overlay {
+    margin: -5px -5px;
+    position: absolute;
+    height: 105%;
+    width: 105%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(http://cdn.mos.cms.futurecdn.net/uYr6LFF8seHvcamkXBoeSP.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.lead {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.amazon-item-title {
+    height: 70px;
+    display: flex;
+}
+
+.amazon-item-title > h2 {
+    align-self: flex-end;
+}
+
+.item-container {
+    align-items: baseline;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.item-container p {
+    flex-grow: 1;
+}
