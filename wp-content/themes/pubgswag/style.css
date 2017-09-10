@@ -97,6 +97,7 @@ html, body {
 
 .item-container button {
     padding-right: 30px;
+    cursor: pointer;
 }
 
 .category-heading {
