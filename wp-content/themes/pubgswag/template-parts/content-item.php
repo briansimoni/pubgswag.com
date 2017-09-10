@@ -11,8 +11,7 @@
             echo '<img class="img-fluid" src="http://via.placeholder.com/350x250">';
         } ?>
 		<h3><?php the_field('price', $post->ID) ?></h3>
-		<p>description</p>
-		<!--                <a target="_blank" href="https://www.amazon.com/gp/product/B00006JSUA/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00006JSUA&linkCode=as2&tag=pubgswag-20&linkId=f910cac0de9e75442680d9258e3a7ee4">Lodge Cast Iron Skillet, Pre-Seasoned, 10.25-inch</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=pubgswag-20&l=am2&o=1&a=B00006JSUA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />-->
+        <p><?php echo $post->post_content ?></p>
         <a href="<?php the_field('amazon_link', $post->ID)?>">
             <button class="btn btn-primary">
                 <img src="<?php echo get_template_directory_uri() . '/images/amazon-glyph.png'?>">
