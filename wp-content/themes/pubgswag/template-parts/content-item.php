@@ -10,7 +10,7 @@
         <?php } else {
             echo '<img class="img-fluid" src="http://via.placeholder.com/350x250">';
         } ?>
-		<h3><?php the_field('price', $post->ID) ?></h3>
+		<h3 class="price"><?php the_field('price', $post->ID) ?></h3>
         <p><?php echo $post->post_content ?></p>
         <a target="_blank" href="<?php the_field('amazon_link', $post->ID)?>">
             <button class="btn btn-primary">
