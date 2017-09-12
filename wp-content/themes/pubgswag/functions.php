@@ -39,4 +39,10 @@ function my_walker_nav_menu_start_el($item_output, $item, $depth, $args) {
 }
 add_filter('walker_nav_menu_start_el', 'my_walker_nav_menu_start_el', 10, 4);
 
+function increase_post_query_size($query) {
+	$query->query_vars['posts_per_page'] = 1000;
+	return;
+}
+add_filter('pre_get_posts', 'increase_post_query_size');
+
 
