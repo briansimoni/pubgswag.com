@@ -114,6 +114,10 @@ html, body {
     margin-top: 30px;
 }
 
+.container > .row:last-child {
+    margin-bottom: 30px;
+}
+
 #fb-wrapper {
     margin: 20px;
     text-align: center;
