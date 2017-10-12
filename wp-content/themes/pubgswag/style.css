@@ -113,3 +113,8 @@ html, body {
 .row {
     margin-top: 30px;
 }
+
+#fb-wrapper {
+    margin: 20px;
+    text-align: center;
+}
