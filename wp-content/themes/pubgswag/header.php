@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/images/favicon-32x32.png'?>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri() . '/images/favicon-96x96.png'?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/images/favicon-16x16.png'?>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106795185-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
