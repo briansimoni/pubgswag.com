@@ -13,7 +13,7 @@
 		<h3 class="price">$<?php the_field('price', $post->ID) ?></h3>
         <p><?php echo $post->post_content ?></p>
         <a target="_blank" href="<?php the_field('amazon_link', $post->ID)?>">
-            <button class="btn btn-primary">
+            <button class="amazon-button btn btn-primary">
                 <img src="<?php echo get_template_directory_uri() . '/images/amazon-glyph.png'?>">
                 Buy
             </button>
