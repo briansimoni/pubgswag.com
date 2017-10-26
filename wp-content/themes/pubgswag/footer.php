@@ -17,44 +17,6 @@
         }(document, 'script', 'facebook-jssdk'));</script>
 
     <script>
-        var items = document.getElementsByClassName('item-container');
-
-
-        var g = function(ASIN, item, timeout) {
-            setTimeout(function() {
-                jQuery.ajax("https://qe94qn53xe.execute-api.us-east-1.amazonaws.com/prod/Get-Amazon-Prices?ASIN=" + ASIN)
-                    .done(function(response) {
-                        try {
-                            lowestPrice = f(response);
-                            var price = item.getElementsByClassName("price")[0];
-                            price = lowestPrice;
-                        } catch (error) {
-                            console.log(error);
-                            var price = item.getElementsByClassName("price")[0];
-                            price.innerHTML = "See Price on Amazon"
-                        }
-                    })
-                    .fail(function(error) {
-                        throw(error);
-                    });
-            }, timeout);
-        };
-
-
-        for( var i = 0; i < items.length; i++ ) {
-            timeout = 100;
-            var item = items[i];
-            thing = items[i];
-            var link = items[i].getElementsByClassName('amazon-link')[0];
-            var ASIN = link.href.match(/product\/.*\//)[0].match(/\/.*\//)[0];
-            ASIN = ASIN.substring(1, ASIN.length - 1);
-            console.log(ASIN);
-            g(ASIN, item, timeout);
-
-            timeout += 200;
-        }
-
-
         var f = function(response) {
             var lowest = 99999999;
             var lowestString = "";
@@ -83,6 +45,53 @@
             }
             return lowestString;
         };
+
+
+        var g = function(ASIN, item) {
+            jQuery.ajax("https://qe94qn53xe.execute-api.us-east-1.amazonaws.com/prod/Get-Amazon-Prices?ASIN=" + ASIN)
+                .done(function(response) {
+                    try {
+                        lowestPrice = f(response);
+                        console.log(lowestPrice);
+                        console.log(item);
+                        var price = item.getElementsByClassName("price")[0];
+                        price.innerHTML = lowestPrice;
+                    } catch (error) {
+                        console.log(error);
+                        var price = item.getElementsByClassName("price")[0];
+                        price.innerHTML = "See Price on Amazon"
+                    }
+                })
+                .fail(function(error) {
+                    throw(error);
+                });
+        };
+
+        var items = document.getElementsByClassName('item-container');
+        var itemsArray = new Array();
+
+        for( var i = 0; i < items.length; i++ ) {
+            var item = items[i];
+            thing = items[i];
+            var link = items[i].getElementsByClassName('amazon-link')[0];
+            var ASIN = link.href.match(/product\/.*\//)[0].match(/\/.*\//)[0];
+            ASIN = ASIN.substring(1, ASIN.length - 1);
+            itemsArray.push(
+                {
+                    "item": item,
+                    "ASIN": ASIN
+                }
+            );
+        }
+
+
+        var interval = setInterval(function() {
+            var div = itemsArray.pop();
+            if (!div) {
+                clearInterval(interval);
+            }
+            g(div.ASIN, div.item);
+        }, 250);
     </script>
 
 </footer>
