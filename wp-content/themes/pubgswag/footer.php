@@ -51,13 +51,10 @@
             jQuery.ajax("https://qe94qn53xe.execute-api.us-east-1.amazonaws.com/prod/Get-Amazon-Prices?ASIN=" + ASIN)
                 .done(function(response) {
                     try {
-                        lowestPrice = f(response);
-                        console.log(lowestPrice);
-                        console.log(item);
+                        var lowestPrice = f(response);
                         var price = item.getElementsByClassName("price")[0];
                         price.innerHTML = lowestPrice;
                     } catch (error) {
-                        console.log(error);
                         var price = item.getElementsByClassName("price")[0];
                         price.innerHTML = "See Price on Amazon"
                     }
@@ -68,11 +65,10 @@
         };
 
         var items = document.getElementsByClassName('item-container');
-        var itemsArray = new Array();
+        var itemsArray = [];
 
         for( var i = 0; i < items.length; i++ ) {
             var item = items[i];
-            thing = items[i];
             var link = items[i].getElementsByClassName('amazon-link')[0];
             var ASIN = link.href.match(/product\/.*\//)[0].match(/\/.*\//)[0];
             ASIN = ASIN.substring(1, ASIN.length - 1);
