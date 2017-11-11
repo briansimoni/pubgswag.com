@@ -14,10 +14,7 @@
         <h3 class="price">See Price on Amazon</h3>
         <p><?php echo $post->post_content ?></p>
         <a class="amazon-link" data-amazon-item="<?php echo $post->post_title ?>" target="_blank" href="<?php the_field('amazon_link', $post->ID)?>">
-            <button class="btn btn-primary">
-                <img src="<?php echo get_template_directory_uri() . '/images/amazon-glyph.png'?>">
-                Check it Out
-            </button>
+            <img src="<?php echo get_template_directory_uri() . '/images/amazon-button.gif'?>">
         </a>
 	</div>
 </div>
