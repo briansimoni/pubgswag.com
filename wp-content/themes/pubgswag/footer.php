@@ -4,9 +4,14 @@
 </div> <!-- end wrapper -->
 
 <footer class="footer">
+
+
     <div id="fb-wrapper">
         <div class="fb-share-button" data-href="https://pubgswag.com" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpubgswag.com%2F&amp;src=sdkpreparse">Share</a></div>
     </div>
+    <p id="disclaimer">
+        “We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.”
+    </p>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];

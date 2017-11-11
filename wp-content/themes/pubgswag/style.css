@@ -30,7 +30,7 @@ html, body {
 }
 .footer,
 .push {
-    height: 50px;
+    height: 100px;
     background-color: #292b2c;
 }
 
@@ -120,5 +120,9 @@ html, body {
 
 #fb-wrapper {
     margin: 20px;
+    text-align: center;
+}
+
+#disclaimer {
     text-align: center;
 }
